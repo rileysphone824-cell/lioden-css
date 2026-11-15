@@ -1,0 +1,190 @@
+/* =========================================
+   1. FULL PAGE BACKGROUND & BASE FONTS
+   ========================================= */
+body {
+  background: #050000 url('https://i.postimg.cc/xTHJ5sbb/e11298bd1b6a94b176ee36ceb49ebfd9.jpg') fixed center center !important;
+  background-size: cover !important;
+  color: #e6e6e6 !important;
+  font-family: Georgia, serif !important;
+}
+
+/* MAIN TRANSPARENT DARK PANELS */
+.main, .topbar, .navbar, .sidebar .panel, .breadcrumb, .alert, .table {
+  background: rgba(10, 0, 0, 0.85) !important;
+  border: 1px solid #8a0303 !important;
+  color: #e6e6e6 !important;
+}
+
+/* NAVIGATION & LINKS */
+a, .navbar a, h1, h2, h3 {
+  color: #ff1a1a !important;
+  text-shadow: 0 0 6px #660000;
+}
+a:hover {
+  color: #ffffff !important;
+}
+
+/* ROUND KING AVATAR */
+div.lionImage img, .king-avatar img {
+  border-radius: 50% !important;
+  border: 2px solid #b30000 !important;
+  box-shadow: 0 0 15px #ff0000 !important;
+}
+
+/* PROGRESS BARS (ENERGY, HUNGER, EXP) */
+.progress {
+  background-color: #1a0000 !important;
+  border: 1px solid #660000 !important;
+}
+.progress-bar {
+  background-color: #990000 !important;
+}
+
+/* CAVE BOXES & INPUTS */
+.cave-grid {
+  background: rgba(15, 0, 0, 0.85) !important;
+  border: 1px solid #8a0303 !important;
+  color: #e6e6e6 !important;
+}
+textarea, input[type="text"], .comment {
+  background-color: #0d0000 !important;
+  border: 1px solid #660000 !important;
+  color: #f2f2f2 !important;
+}
+input[type="submit"], button, .btn {
+  background-color: #660000 !important;
+  border: 1px solid #b30000 !important;
+  color: #ffffff !important;
+}
+input[type="submit"]:hover, button:hover, .btn:hover {
+  background-color: #990000 !important;
+}
+
+/* CUSTOM DARK RED SCROLLBAR */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0000;
+}
+::-webkit-scrollbar-thumb {
+  background: #8a0303;
+  border-radius: 4px;
+}
+
+/* =========================================
+   2. HIDE BEETLE MOUNDS
+   ========================================= */
+.mound-grid, a[href*="beetlemound"], a[href*="mound"] {
+  display: none !important;
+}
+
+/* =========================================
+   3. UNSORTED -> "Strays"
+   ========================================= */
+a[href*="unsorted.php"] > div.cave-grid > img {
+  background: url('https://i.postimg.cc/T2b3vK2V/dd453fb6be6b1ea71a605f24304afcb3.jpg') center center no-repeat !important;
+  background-size: cover !important;
+  padding-left: 100% !important;
+  height: 120px !important;
+}
+a[href*="unsorted.php"] > div.cave-grid {
+  font-size: 0 !important;
+}
+a[href*="unsorted.php"] > div.cave-grid::after {
+  content: "🦇 Strays";
+  font-size: 14px !important;
+  font-family: Georgia, serif !important;
+  color: #ff1a1a !important;
+  text-shadow: 0 0 6px #660000;
+  display: block;
+  padding: 6px 0;
+}
+
+/* =========================================
+   4. PREGNANT / NESTING -> "The Den"
+   ========================================= */
+a[href*="nesting.php"] > div.cave-grid > img {
+  background: url('https://i.postimg.cc/fTHFHK4Y/43ab436b9da2d567f4cc328f2e0f0431.jpg') center center no-repeat !important;
+  background-size: cover !important;
+  padding-left: 100% !important;
+  height: 120px !important;
+}
+a[href*="nesting.php"] > div.cave-grid {
+  font-size: 0 !important;
+}
+a[href*="nesting.php"] > div.cave-grid::after {
+  content: "⸸ The Den";
+  font-size: 14px !important;
+  font-family: Georgia, serif !important;
+  color: #ff1a1a !important;
+  text-shadow: 0 0 6px #660000;
+  display: block;
+  padding: 6px 0;
+}
+
+/* =========================================
+   5. CAVE 1 (557691) -> "The Vampires"
+   ========================================= */
+a[href$="557691"] > div.cave-grid > img {
+  background: url('https://i.postimg.cc/rwPBp9QS/5d285cbfc92e638f7020aebd59bab835.jpg') center center no-repeat !important;
+  background-size: cover !important;
+  padding-left: 100% !important;
+  height: 120px !important;
+}
+a[href$="557691"] > div.cave-grid {
+  font-size: 0 !important;
+}
+a[href$="557691"] > div.cave-grid::after {
+  content: "🦇 The Vampires";
+  font-size: 14px !important;
+  font-family: Georgia, serif !important;
+  color: #ff1a1a !important;
+  text-shadow: 0 0 6px #660000;
+  display: block;
+  padding: 6px 0;
+}
+
+/* =========================================
+   6. CAVE 2 (107557) -> "The Werewolves (Muts)"
+   ========================================= */
+a[href$="107557"] > div.cave-grid > img {
+  background: url('https://i.postimg.cc/vZ2sVyH5/976c3003c8aa431e69caf36dcef0e013.jpg') center center no-repeat !important;
+  background-size: cover !important;
+  padding-left: 100% !important;
+  height: 120px !important;
+}
+a[href$="107557"] > div.cave-grid {
+  font-size: 0 !important;
+}
+a[href$="107557"] > div.cave-grid::after {
+  content: "⸸ The Werewolves (Muts)";
+  font-size: 14px !important;
+  font-family: Georgia, serif !important;
+  color: #ff1a1a !important;
+  text-shadow: 0 0 6px #660000;
+  display: block;
+  padding: 6px 0;
+}
+
+/* =========================================
+   7. CAVE 3 (145005) -> "Bats & Pups"
+   ========================================= */
+a[href$="145005"] > div.cave-grid > img {
+  background: url('https://i.postimg.cc/ZnzZ5LYc/0344d5e1b3a029233dc9e3d20f21eb24.jpg') center center no-repeat !important;
+  background-size: cover !important;
+  padding-left: 100% !important;
+  height: 120px !important;
+}
+a[href$="145005"] > div.cave-grid {
+  font-size: 0 !important;
+}
+a[href$="145005"] > div.cave-grid::after {
+  content: "🦇 Bats & Pups";
+  font-size: 14px !important;
+  font-family: Georgia, serif !important;
+  color: #ff1a1a !important;
+  text-shadow: 0 0 6px #660000;
+  display: block;
+  padding: 6px 0;
+}
