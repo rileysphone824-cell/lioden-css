@@ -4,35 +4,58 @@
 body {
   background: #050000 url('https://i.postimg.cc/xTHJ5sbb/e11298bd1b6a94b176ee36ceb49ebfd9.jpg') fixed center center !important;
   background-size: cover !important;
-  color: #d9d9d9 !important;
+  color: #e6e6e6 !important;
   font-family: Georgia, serif !important;
 }
 
-/* MAIN CENTER CONTAINER & PANELS (Fixes the light gray box!) */
-.container.main, .main, .col-md-9, .topbar, .navbar, .sidebar .panel, .breadcrumb, .alert, .table, .box, .well {
-  background: rgba(8, 0, 0, 0.88) !important;
-  border: 1px solid #590000 !important;
-  color: #d9d9d9 !important;
+/* =========================================
+   2. REMOVE ALL DEFAULT LIONDEN TAN/GRAY COLORS
+   ========================================= */
+.container, .container.main, .main, .col-md-9, .col-md-12, .col-xs-12,
+.topbar, .navbar, .navbar-default, .navbar-collapse, .sidebar .panel,
+.breadcrumb, .alert, .table, .top, .bottom, .feature,
+.box, .well, .panel, .panel-body, .item, .item-header, .item-footer,
+div.left, div.right, td.left, td.right, .inner-table .left, .inner-table .right,
+.right_odd, .right_even, th, td, tr, .table .header, .table th {
+  background: rgba(8, 0, 0, 0.90) !important;
+  background-color: rgba(8, 0, 0, 0.90) !important;
+  border-color: #590000 !important;
+  color: #e6e6e6 !important;
+  box-shadow: none !important;
+}
+
+/* DARKEN SUB-HEADERS & TABLE BARS */
+.top, .table .header, .table th, .panel-heading, .item-header {
+  background: #2b0000 !important;
+  background-color: #2b0000 !important;
+  color: #ffffff !important;
+  border-bottom: 1px solid #660000 !important;
+}
+
+/* ENSURE ALL PARAGRAPHS, LISTS & SMALL TEXT ARE LEGIBLE */
+p, span, div, li, small, b, strong, .text-muted, .subtext {
+  color: #e6e6e6 !important;
 }
 
 /* CHAT BOX DARKENING */
 .s-chat-message:nth-child(even), .s-chat-message:nth-child(odd), #chatMessageContainer {
-  background: rgba(15, 0, 0, 0.9) !important;
-  color: #d9d9d9 !important;
+  background: rgba(15, 0, 0, 0.94) !important;
+  color: #e6e6e6 !important;
   border-bottom: 1px solid #330000 !important;
 }
 
-/* DARKER BLOOD RED HEADINGS & LINKS */
-a, .navbar a, h1, h2, h3 {
-  color: #a80000 !important;
+/* DARK BLOOD RED HEADINGS & LINKS */
+a, .navbar a, .topbar a, h1, h2, h3, h4 {
+  color: #b80000 !important;
   text-shadow: 0 0 6px #2b0000 !important;
 }
-a:hover {
-  color: #e60000 !important;
+a:hover, .navbar a:hover, .topbar a:hover {
+  color: #ff1a1a !important;
+  background-color: transparent !important;
 }
 
 /* ROUND KING AVATAR */
-div.lionImage img, .king-avatar img {
+div.lionImage img, .king-avatar img, #lion_image img {
   border-radius: 50% !important;
   border: 2px solid #7a0000 !important;
   box-shadow: 0 0 15px #4d0000 !important;
@@ -47,27 +70,21 @@ div.lionImage img, .king-avatar img {
   background-color: #7a0000 !important;
 }
 
-/* CAVE BOXES & INPUTS */
-.cave-grid {
-  background: rgba(12, 0, 0, 0.88) !important;
-  border: 1px solid #590000 !important;
-  color: #d9d9d9 !important;
-}
-textarea, input[type="text"], .comment {
+/* INPUTS, BUTTONS & SCROLLBAR */
+textarea, input[type="text"], select, .comment {
   background-color: #0a0000 !important;
   border: 1px solid #4d0000 !important;
-  color: #e6e6e6 !important;
+  color: #f2f2f2 !important;
 }
-input[type="submit"], button, .btn {
+input[type="submit"], input[type="button"], button, .btn {
   background-color: #4d0000 !important;
+  background-image: none !important;
   border: 1px solid #800000 !important;
-  color: #e6e6e6 !important;
+  color: #ffffff !important;
 }
-input[type="submit"]:hover, button:hover, .btn:hover {
+input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover {
   background-color: #7a0000 !important;
 }
-
-/* CUSTOM DARK RED SCROLLBAR */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -80,14 +97,48 @@ input[type="submit"]:hover, button:hover, .btn:hover {
 }
 
 /* =========================================
-   2. HIDE BEETLE MOUNDS
+   3. HIDE PRIDE OVERVIEW & BEETLE MOUNDS
    ========================================= */
+a[href*="prideoverview.php"], a[href*="pride.php"], a[href*="overview"],
+div:has(> a[href*="prideoverview.php"]),
+img[src*="prideoverviewbanner"],
 .mound-grid, a[href*="beetlemound"], a[href*="mound"] {
   display: none !important;
 }
 
 /* =========================================
-   3. UNSORTED -> "Strays"
+   4. CENTER ALL CAVES (3 ON TOP, 2 CENTERED ON BOTTOM)
+   ========================================= */
+div:has(> a > div.cave-grid) {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 15px !important;
+  width: 100% !important;
+  text-align: center !important;
+}
+
+div:has(> a > div.cave-grid) > a {
+  display: block !important;
+  float: none !important;
+  margin: 0 !important;
+  width: 245px !important;
+  max-width: 245px !important;
+  flex: 0 0 245px !important;
+}
+
+.cave-grid {
+  background: rgba(12, 0, 0, 0.94) !important;
+  border: 1px solid #590000 !important;
+  color: #e6e6e6 !important;
+  width: 100% !important;
+  margin: 0 !important;
+  padding-bottom: 4px !important;
+}
+
+/* =========================================
+   5. UNSORTED -> "Strays"
    ========================================= */
 a[href*="unsorted.php"] > div.cave-grid > img {
   background: url('https://i.postimg.cc/T2b3vK2V/dd453fb6be6b1ea71a605f24304afcb3.jpg') center center no-repeat !important;
@@ -102,14 +153,14 @@ a[href*="unsorted.php"] > div.cave-grid::after {
   content: "🦇 Strays";
   font-size: 14px !important;
   font-family: Georgia, serif !important;
-  color: #a80000 !important;
+  color: #b80000 !important;
   text-shadow: 0 0 6px #2b0000;
   display: block;
   padding: 6px 0;
 }
 
 /* =========================================
-   4. PREGNANT / NESTING -> "The Den"
+   6. PREGNANT / NESTING -> "The Den"
    ========================================= */
 a[href*="nesting.php"] > div.cave-grid > img {
   background: url('https://i.postimg.cc/fTHFHK4Y/43ab436b9da2d567f4cc328f2e0f0431.jpg') center center no-repeat !important;
@@ -124,14 +175,14 @@ a[href*="nesting.php"] > div.cave-grid::after {
   content: "⸸ The Den";
   font-size: 14px !important;
   font-family: Georgia, serif !important;
-  color: #a80000 !important;
+  color: #b80000 !important;
   text-shadow: 0 0 6px #2b0000;
   display: block;
   padding: 6px 0;
 }
 
 /* =========================================
-   5. CAVE 1 (557691) -> "The Vampires"
+   7. CAVE 1 (557691) -> "The Vampires"
    ========================================= */
 a[href$="557691"] > div.cave-grid > img {
   background: url('https://i.postimg.cc/rwPBp9QS/5d285cbfc92e638f7020aebd59bab835.jpg') center center no-repeat !important;
@@ -146,14 +197,14 @@ a[href$="557691"] > div.cave-grid::after {
   content: "🦇 The Vampires";
   font-size: 14px !important;
   font-family: Georgia, serif !important;
-  color: #a80000 !important;
+  color: #b80000 !important;
   text-shadow: 0 0 6px #2b0000;
   display: block;
   padding: 6px 0;
 }
 
 /* =========================================
-   6. CAVE 2 (107557) -> "The Werewolves (Muts)"
+   8. CAVE 2 (107557) -> "The Werewolves (Muts)"
    ========================================= */
 a[href$="107557"] > div.cave-grid > img {
   background: url('https://i.postimg.cc/vZ2sVyH5/976c3003c8aa431e69caf36dcef0e013.jpg') center center no-repeat !important;
@@ -168,14 +219,14 @@ a[href$="107557"] > div.cave-grid::after {
   content: "⸸ The Werewolves (Muts)";
   font-size: 14px !important;
   font-family: Georgia, serif !important;
-  color: #a80000 !important;
+  color: #b80000 !important;
   text-shadow: 0 0 6px #2b0000;
   display: block;
   padding: 6px 0;
 }
 
 /* =========================================
-   7. CAVE 3 (145005) -> "Bats & Pups"
+   9. CAVE 3 (145005) -> "Bats & Pups"
    ========================================= */
 a[href$="145005"] > div.cave-grid > img {
   background: url('https://i.postimg.cc/ZnzZ5LYc/0344d5e1b3a029233dc9e3d20f21eb24.jpg') center center no-repeat !important;
@@ -190,7 +241,7 @@ a[href$="145005"] > div.cave-grid::after {
   content: "🦇 Bats & Pups";
   font-size: 14px !important;
   font-family: Georgia, serif !important;
-  color: #a80000 !important;
+  color: #b80000 !important;
   text-shadow: 0 0 6px #2b0000;
   display: block;
   padding: 6px 0;
