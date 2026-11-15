@@ -4,60 +4,67 @@
 body {
   background: #050000 url('https://i.postimg.cc/xTHJ5sbb/e11298bd1b6a94b176ee36ceb49ebfd9.jpg') fixed center center !important;
   background-size: cover !important;
-  color: #e6e6e6 !important;
+  color: #d9d9d9 !important;
   font-family: Georgia, serif !important;
 }
 
-/* MAIN TRANSPARENT DARK PANELS */
-.main, .topbar, .navbar, .sidebar .panel, .breadcrumb, .alert, .table {
-  background: rgba(10, 0, 0, 0.85) !important;
-  border: 1px solid #8a0303 !important;
-  color: #e6e6e6 !important;
+/* MAIN CENTER CONTAINER & PANELS (Fixes the light gray box!) */
+.container.main, .main, .col-md-9, .topbar, .navbar, .sidebar .panel, .breadcrumb, .alert, .table, .box, .well {
+  background: rgba(8, 0, 0, 0.88) !important;
+  border: 1px solid #590000 !important;
+  color: #d9d9d9 !important;
 }
 
-/* NAVIGATION & LINKS */
+/* CHAT BOX DARKENING */
+.s-chat-message:nth-child(even), .s-chat-message:nth-child(odd), #chatMessageContainer {
+  background: rgba(15, 0, 0, 0.9) !important;
+  color: #d9d9d9 !important;
+  border-bottom: 1px solid #330000 !important;
+}
+
+/* DARKER BLOOD RED HEADINGS & LINKS */
 a, .navbar a, h1, h2, h3 {
-  color: #ff1a1a !important;
-  text-shadow: 0 0 6px #660000;
+  color: #a80000 !important;
+  text-shadow: 0 0 6px #2b0000 !important;
 }
 a:hover {
-  color: #ffffff !important;
+  color: #e60000 !important;
 }
 
 /* ROUND KING AVATAR */
 div.lionImage img, .king-avatar img {
   border-radius: 50% !important;
-  border: 2px solid #b30000 !important;
-  box-shadow: 0 0 15px #ff0000 !important;
+  border: 2px solid #7a0000 !important;
+  box-shadow: 0 0 15px #4d0000 !important;
 }
 
 /* PROGRESS BARS (ENERGY, HUNGER, EXP) */
 .progress {
-  background-color: #1a0000 !important;
-  border: 1px solid #660000 !important;
+  background-color: #140000 !important;
+  border: 1px solid #4d0000 !important;
 }
 .progress-bar {
-  background-color: #990000 !important;
+  background-color: #7a0000 !important;
 }
 
 /* CAVE BOXES & INPUTS */
 .cave-grid {
-  background: rgba(15, 0, 0, 0.85) !important;
-  border: 1px solid #8a0303 !important;
-  color: #e6e6e6 !important;
+  background: rgba(12, 0, 0, 0.88) !important;
+  border: 1px solid #590000 !important;
+  color: #d9d9d9 !important;
 }
 textarea, input[type="text"], .comment {
-  background-color: #0d0000 !important;
-  border: 1px solid #660000 !important;
-  color: #f2f2f2 !important;
+  background-color: #0a0000 !important;
+  border: 1px solid #4d0000 !important;
+  color: #e6e6e6 !important;
 }
 input[type="submit"], button, .btn {
-  background-color: #660000 !important;
-  border: 1px solid #b30000 !important;
-  color: #ffffff !important;
+  background-color: #4d0000 !important;
+  border: 1px solid #800000 !important;
+  color: #e6e6e6 !important;
 }
 input[type="submit"]:hover, button:hover, .btn:hover {
-  background-color: #990000 !important;
+  background-color: #7a0000 !important;
 }
 
 /* CUSTOM DARK RED SCROLLBAR */
@@ -65,10 +72,10 @@ input[type="submit"]:hover, button:hover, .btn:hover {
   width: 8px;
 }
 ::-webkit-scrollbar-track {
-  background: #0a0000;
+  background: #080000;
 }
 ::-webkit-scrollbar-thumb {
-  background: #8a0303;
+  background: #590000;
   border-radius: 4px;
 }
 
@@ -95,8 +102,8 @@ a[href*="unsorted.php"] > div.cave-grid::after {
   content: "🦇 Strays";
   font-size: 14px !important;
   font-family: Georgia, serif !important;
-  color: #ff1a1a !important;
-  text-shadow: 0 0 6px #660000;
+  color: #a80000 !important;
+  text-shadow: 0 0 6px #2b0000;
   display: block;
   padding: 6px 0;
 }
@@ -117,8 +124,8 @@ a[href*="nesting.php"] > div.cave-grid::after {
   content: "⸸ The Den";
   font-size: 14px !important;
   font-family: Georgia, serif !important;
-  color: #ff1a1a !important;
-  text-shadow: 0 0 6px #660000;
+  color: #a80000 !important;
+  text-shadow: 0 0 6px #2b0000;
   display: block;
   padding: 6px 0;
 }
@@ -139,8 +146,8 @@ a[href$="557691"] > div.cave-grid::after {
   content: "🦇 The Vampires";
   font-size: 14px !important;
   font-family: Georgia, serif !important;
-  color: #ff1a1a !important;
-  text-shadow: 0 0 6px #660000;
+  color: #a80000 !important;
+  text-shadow: 0 0 6px #2b0000;
   display: block;
   padding: 6px 0;
 }
@@ -161,8 +168,8 @@ a[href$="107557"] > div.cave-grid::after {
   content: "⸸ The Werewolves (Muts)";
   font-size: 14px !important;
   font-family: Georgia, serif !important;
-  color: #ff1a1a !important;
-  text-shadow: 0 0 6px #660000;
+  color: #a80000 !important;
+  text-shadow: 0 0 6px #2b0000;
   display: block;
   padding: 6px 0;
 }
@@ -183,8 +190,8 @@ a[href$="145005"] > div.cave-grid::after {
   content: "🦇 Bats & Pups";
   font-size: 14px !important;
   font-family: Georgia, serif !important;
-  color: #ff1a1a !important;
-  text-shadow: 0 0 6px #660000;
+  color: #a80000 !important;
+  text-shadow: 0 0 6px #2b0000;
   display: block;
   padding: 6px 0;
 }
