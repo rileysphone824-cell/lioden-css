@@ -54,11 +54,11 @@ a:hover, .navbar a:hover, .topbar a:hover {
   background-color: transparent !important;
 }
 
-/* ROUND KING AVATAR */
+/* SQUARE KING AVATAR (NO CIRCLE) */
 div.lionImage img, .king-avatar img, #lion_image img {
-  border-radius: 50% !important;
-  border: 2px solid #7a0000 !important;
-  box-shadow: 0 0 15px #4d0000 !important;
+  border-radius: 4px !important;
+  border: 1px solid #7a0000 !important;
+  box-shadow: none !important;
 }
 
 /* PROGRESS BARS (ENERGY, HUNGER, EXP) */
@@ -99,27 +99,32 @@ input[type="submit"]:hover, input[type="button"]:hover, button:hover, .btn:hover
 /* =========================================
    3. HIDE PRIDE OVERVIEW & BEETLE MOUNDS
    ========================================= */
-a[href*="prideoverview.php"], a[href*="pride.php"], a[href*="overview"],
+a[href*="prideoverview.php"],
 div:has(> a[href*="prideoverview.php"]),
+div:has(> div > a[href*="prideoverview.php"]),
 img[src*="prideoverviewbanner"],
 .mound-grid, a[href*="beetlemound"], a[href*="mound"] {
   display: none !important;
 }
 
 /* =========================================
-   4. CENTER ALL CAVES (3 ON TOP, 2 CENTERED ON BOTTOM)
+   4. CAVES IN TWO ROWS (3 ON TOP, 2 CENTERED ON BOTTOM)
    ========================================= */
-div:has(> a > div.cave-grid) {
+div:has(> a > div.cave-grid),
+div:has(> div > a > div.cave-grid) {
   display: flex !important;
   flex-wrap: wrap !important;
   justify-content: center !important;
-  align-items: center !important;
+  align-items: stretch !important;
   gap: 15px !important;
   width: 100% !important;
+  max-width: 820px !important;
+  margin: 0 auto !important;
   text-align: center !important;
 }
 
-div:has(> a > div.cave-grid) > a {
+div:has(> a > div.cave-grid) > a,
+div:has(> div > a > div.cave-grid) > div {
   display: block !important;
   float: none !important;
   margin: 0 !important;
@@ -245,4 +250,31 @@ a[href$="145005"] > div.cave-grid::after {
   text-shadow: 0 0 6px #2b0000;
   display: block;
   padding: 6px 0;
+}
+
+/* =========================================
+   10. FIX KING DYNASTY / ACHIEVEMENTS / SHOWCASE ALIGNMENT
+   ========================================= */
+div.row:has(a[href*="dynasty.php"]) {
+  display: flex !important;
+  flex-wrap: wrap !important;
+  justify-content: center !important;
+  align-items: center !important;
+  gap: 20px !important;
+  width: 100% !important;
+  margin: 15px auto !important;
+}
+
+div.row:has(a[href*="dynasty.php"]) > div {
+  float: none !important;
+  width: auto !important;
+  min-width: 240px !important;
+  text-align: center !important;
+  margin: 0 !important;
+}
+
+div.row:has(a[href*="dynasty.php"]) img {
+  border: 1px solid #590000 !important;
+  max-width: 240px !important;
+  height: auto !important;
 }
